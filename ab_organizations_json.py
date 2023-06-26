@@ -15,16 +15,16 @@ if response.status_code == 200:
     print(data)
     guardar_json = input("¿Desea guardar el archivo JSON? (y/n): ")
     if guardar_json.lower() == "y":
-        # Obtener el nombre del archivo de código actual
+        # Obtener nombre del archivo actual
         nombre_archivo = os.path.basename(__file__)
-        # Obtener la ruta completa de la carpeta "jsons"
+        # Obtener ruta de la carpeta "jsons"
         ruta_carpeta = os.path.join(os.path.dirname(__file__), "jsons")
         # Verificar si la carpeta no existe y crearla en caso necesario
         if not os.path.exists(ruta_carpeta):
             os.makedirs(ruta_carpeta)
-        # Generar el nombre completo del archivo JSON
+        # Generar nombre del archivo JSON
         nombre_json = os.path.join(ruta_carpeta, f"{os.path.splitext(nombre_archivo)[0]}.json")
-        # Guardar los datos de respuesta en un archivo JSON
+        # Guardar datos de respuesta en un archivo JSON
         with open(nombre_json, "w") as archivo:
             json.dump(data, archivo)
         print(f"Archivo JSON guardado: {nombre_json}")
