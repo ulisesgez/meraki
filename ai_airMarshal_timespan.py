@@ -3,7 +3,7 @@ import requests
 import json
 import os
 
-url = f"{aa_var.baseURL3}/{aa_var.id}/wireless/airMarshal?timespan=2678400"
+url = f"{aa_var.baseURL3}/{aa_var.id}/{aa_var.baseURL4}"
 headers = {
     "X-Cisco-Meraki-API-Key": aa_var.key
 }
