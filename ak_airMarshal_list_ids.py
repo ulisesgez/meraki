@@ -21,9 +21,7 @@ for id in ids:
     if response.status_code == 200:
         data = response.json()
         print(data)
-        #df=pd.DataFrame(data)
-        nombre_archivo = os.path.basename(__file__)
-        nombre_json = f"{os.path.splitext(nombre_archivo)[0]}_{id}.json"
+        nombre_json = f"L_{id}.json"
         with open(os.path.join(carpeta_export, nombre_json), "w") as archivo:
             json.dump(data, archivo)
         print(f"Archivo JSON guardado: {nombre_json}")
