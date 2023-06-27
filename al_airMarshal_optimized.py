@@ -38,9 +38,7 @@ for i in range(estado_actual, len(ids)):
 
         data = response.json()
         print(data)
-        nombre_json = f"L_{id}.json"
-        if id.startswith("L_"):
-            nombre_json = f"{id}.json"
+        nombre_json = f"{id}.json"
         with open(os.path.join(carpeta_export, nombre_json), "w") as archivo:
             json.dump(data, archivo)
         print(f"Archivo JSON guardado: {nombre_json}")
