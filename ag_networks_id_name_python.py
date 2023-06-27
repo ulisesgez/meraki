@@ -24,6 +24,6 @@ file_path = os.path.join(current_folder, 'ah_networks_id_name.py')
 
 # Guardar la lista en archivo .py:
 with open(file_path, 'w') as file:
-    file.write("networks = " + repr(network_list))
+    file.write("idname = " + repr(network_list))
 
-print('Networks guardadas en el archivo networks.py')
+print('Id y Name de Networks guardadas en el archivo ah_networks_id_name.py.py')
