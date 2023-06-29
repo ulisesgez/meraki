@@ -3,7 +3,7 @@ import requests
 import json
 import os
 
-url = f"{aa_var.baseURL1}"
+url = f"{aa_var.baseURL2}?perPage=2000"
 headers = {
     "X-Cisco-Meraki-API-Key": aa_var.key
 }
@@ -23,7 +23,7 @@ if response.status_code == 200:
         if not os.path.exists(ruta_carpeta):
             os.makedirs(ruta_carpeta)
         # Generar nombre del archivo JSON
-        nombre_json = os.path.join(ruta_carpeta, "organizations.json")
+        nombre_json = os.path.join(ruta_carpeta, "networks_perpage.json")
         # Guardar datos de respuesta en un archivo JSON
         with open(nombre_json, "w") as archivo:
             json.dump(data, archivo)

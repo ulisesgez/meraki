@@ -3,7 +3,7 @@ import glob
 import os
 
 # Ruta JSONS
-json_files = glob.glob("json_export/*.json")
+json_files = glob.glob("jsons/*.json")
 total_files = len(json_files)
 processed_files = 0
 
