@@ -3,7 +3,7 @@ import json
 from ai_network_ids_names import idname
 
 # Ruta de la carpeta que contiene los archivos JSON
-carpeta = 'ext'
+carpeta = "./jsons/wireless/air_marshal"
 
 # Iterar sobre cada archivo en la carpeta
 for archivo in os.listdir(carpeta):

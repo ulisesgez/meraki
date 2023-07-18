@@ -2,8 +2,8 @@ import os
 import json
 import csv
 
-input_directory = 'ext'
-output_directory = 'csvs'
+input_directory = "./jsons/wireless/air_marshal"
+output_directory = "./csvs/wireless/air_marshal"
 
 if not os.path.exists(output_directory):
     os.makedirs(output_directory)
